@@ -1,0 +1,27 @@
+{
+    "manifest_version": 2,
+    "name": "NetSuite Record Viewer",
+    "version": "0.0.1",
+    "description": "Allows users to easily view the underlying NetSuite record.",
+    "content_scripts": [
+        {
+            "matches": [
+                "https://*.netsuite.com/*"
+            ],
+            "js": [
+                "index.js"
+            ]
+        }
+    ],
+    "permissions": [
+        "activeTab",
+        "contextMenus",
+        "clipboardWrite",
+        "https://*.netsuite.com/*"
+    ],
+    "background": {
+        "scripts": [
+            "background.js"
+        ]
+    }
+}
